@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Foundry Automations — Forward-deployed engineering for aerospace &amp; defense</title>
+<meta name="description" content="Foundry Automations builds custom software for small aerospace and defense teams — workflow automation, geospatial tooling, and rapid prototyping for problems too narrow for a vendor and too deep for a no-code tool." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+<noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+</head>
+<body>
+
+<div class="sheet-frame" aria-hidden="true">
+  <span class="tick tick-tl"></span><span class="tick tick-tr"></span>
+  <span class="tick tick-bl"></span><span class="tick tick-br"></span>
+  <div class="zone-marks zone-left">
+    <span>A</span><span>B</span><span>C</span><span>D</span>
+  </div>
+</div>
+
+<header class="topbar">
+  <a href="#top" class="wordmark">FOUNDRY&nbsp;AUTOMATIONS</a>
+  <nav class="topnav" aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-small">Book a call</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Forward-deployed engineering</p>
+      <h1>We build the software<br>off-the-shelf tools<br>can't.</h1>
+      <p class="hero-sub">Custom software for small aerospace and defense teams — workflow automation, geospatial tooling, and rapid prototyping — for problems too narrow for a vendor and too deep for a no-code tool.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a discovery call</a>
+        <a href="#work" class="btn btn-ghost">See past builds ↓</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 420 420" class="drawing">
+        <g class="draw-on">
+          <rect x="70" y="70" width="280" height="200" rx="14" />
+          <circle cx="110" cy="110" r="12" />
+          <circle cx="310" cy="110" r="12" />
+          <circle cx="110" cy="230" r="12" />
+          <circle cx="310" cy="230" r="12" />
+          <line x1="70" y1="300" x2="350" y2="300" />
+          <line x1="70" y1="292" x2="70" y2="308" />
+          <line x1="350" y1="292" x2="350" y2="308" />
+          <text x="180" y="320" class="dim-text">3.500</text>
+          <line x1="322" y1="122" x2="380" y2="150" />
+          <text x="384" y="153" class="dim-text">⌀.250 ±.005</text>
+          <rect x="70" y="340" width="280" height="34" class="tblock" />
+          <line x1="163" y1="340" x2="163" y2="374" />
+          <line x1="256" y1="340" x2="256" y2="374" />
+          <text x="90" y="361" class="tblock-text">REV A</text>
+          <text x="182" y="361" class="tblock-text">SCALE NTS</text>
+          <text x="270" y="361" class="tblock-text">SHT 1/1</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="as-is-to-be">
+    <p class="eyebrow">As-is → to-be · one recurring example</p>
+    <h2>The paperwork problem</h2>
+    <p class="section-lede">Paperwork is one common, easy-to-name pattern — not the limit. See selected builds below for the broader range.</p>
+    <div class="cols">
+      <div class="col col-asis">
+        <h3>As-is</h3>
+        <ul>
+          <li>RFQs quoted by hand, one at a time</li>
+          <li>Compliance documentation assembled from scratch every audit cycle</li>
+          <li>PO/inventory reconciliation done manually, at month-end, under time pressure</li>
+          <li>The one person who knows the process is a single point of failure</li>
+        </ul>
+      </div>
+      <div class="col col-tobe">
+        <h3>To-be</h3>
+        <ul>
+          <li>Quotes generated from your own pricing rules in minutes</li>
+          <li>Compliance documentation assembled automatically from source records</li>
+          <li>PO/inventory mismatches flagged daily, not discovered at month-end</li>
+          <li>The process lives in a tool, not only in someone's head</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="portfolio">
+    <p class="eyebrow">Selected builds</p>
+    <h2>Range, not just paperwork</h2>
+    <p class="section-lede">A few self-directed builds showing the kind of ground-up technical work this covers, beyond workflow automation.</p>
+    <div class="portfolio-grid">
+      <article class="build">
+        <p class="build-tag">Geospatial · records</p>
+        <h3>Parcel ownership lookup from flight paths</h3>
+        <p><strong>Problem:</strong> after a drone incident, identifying the affected property and its owner means a manual GIS and county-records lookup.</p>
+        <p><strong>Approach:</strong> upload the incident's KML flight path; the tool resolves the geographic footprint against county tax-parcel boundary data and returns the parcel and ownership record for any point along it.</p>
+        <p><strong>Status:</strong> working tool, self-directed.</p>
+      </article>
+      <article class="build">
+        <p class="build-tag">Geospatial · visualization</p>
+        <h3>Flight path visualization from KML</h3>
+        <p><strong>Problem:</strong> reviewing a flight plan from raw waypoints gives no real spatial sense of the flight.</p>
+        <p><strong>Approach:</strong> upload a KML file; the tool renders it as an interactive, Google Earth-style 3D view of the flight path over real terrain, so the flight can be reviewed visually rather than as a coordinate list.</p>
+        <p><strong>Status:</strong> working tool, self-directed.</p>
+      </article>
+      <article class="build">
+        <p class="build-tag">Generative CAD · RAG</p>
+        <h3>Spec documents to CAD model + JSON</h3>
+        <p><strong>Problem:</strong> turning part specification documents into a usable CAD model and structured data is normally manual drafting and data entry.</p>
+        <p><strong>Approach:</strong> a RAG pipeline that ingests spec documents and generates a corresponding CAD model plus a structured JSON representation of the specs.</p>
+        <p><strong>Status:</strong> proof of concept — the end-to-end pipeline worked and produced usable output, but token cost scaled poorly with document size and some fields were missed on extraction. Confirmed the approach; a production version would need a more targeted extraction strategy.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="traveler">
+    <p class="eyebrow">The engagement, as a router</p>
+    <h2>How it works</h2>
+    <div class="ops">
+      <div class="op reveal">
+        <span class="op-tag">OP10</span>
+        <h3>Discovery call</h3>
+        <p>20 minutes, no pitch. We walk through how the bottleneck works today and what it costs you in hours or dollars.</p>
+      </div>
+      <div class="op-connector" aria-hidden="true"></div>
+      <div class="op reveal">
+        <span class="op-tag">OP20</span>
+        <h3>Fixed-fee pilot</h3>
+        <p>One narrow automation, scoped tightly enough to actually ship. Delivered in 2–4 weeks for a fixed price agreed up front.</p>
+      </div>
+      <div class="op-connector" aria-hidden="true"></div>
+      <div class="op reveal">
+        <span class="op-tag">OP30</span>
+        <h3>Retainer</h3>
+        <p>Once the pilot proves value, an ongoing retainer covers maintenance and the next automation on your list.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <p class="eyebrow">Quote</p>
+    <h2>Pricing</h2>
+    <table class="quote-table">
+      <thead>
+        <tr><th>Line item</th><th>Description</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Discovery call</td>
+          <td>20-minute diagnostic call. No obligation, no pitch.</td>
+          <td class="price">$0</td>
+        </tr>
+        <tr>
+          <td>Pilot</td>
+          <td>One narrow automation built and delivered in 2–4 weeks.</td>
+          <td class="price">$1,500–5,000</td>
+        </tr>
+        <tr>
+          <td>Retainer</td>
+          <td>Ongoing maintenance plus the next automation on your list.</td>
+          <td class="price">$800–3,000<span class="per">/mo</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="pricing-note">Fixed fee, not hourly — you know the price before the work starts.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <p class="eyebrow">No cost · 20 minutes · no pitch</p>
+    <h2>Start with a discovery call</h2>
+    <p class="contact-sub">Tell us about the bottleneck — we'll follow up to schedule a call.</p>
+    <form id="contact-form" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="name" />
+      </div>
+      <div class="field">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company" required autocomplete="organization" />
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+      <div class="field">
+        <label for="message">What's the bottleneck costing you?</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Request a discovery call</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="titleblock">
+  <div class="tb-field"><span class="tb-label">Drawn by</span><span class="tb-value">Foundry Automations</span></div>
+  <div class="tb-field"><span class="tb-label">Rev</span><span class="tb-value">A</span></div>
+  <div class="tb-field"><span class="tb-label">Scale</span><span class="tb-value">NTS</span></div>
+  <div class="tb-field"><span class="tb-label">Sheet</span><span class="tb-value">1 / 1</span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

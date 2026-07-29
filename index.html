@@ -99,28 +99,35 @@
     <p class="eyebrow">Selected builds</p>
     <h2>Range, not just paperwork</h2>
     <p class="section-lede">A few self-directed builds showing the kind of ground-up technical work this covers, beyond workflow automation.</p>
-    <div class="portfolio-grid">
-      <article class="build">
-        <p class="build-tag">Geospatial · records</p>
-        <h3>Parcel ownership lookup from flight paths</h3>
-        <p><strong>Problem:</strong> after a drone incident, identifying the affected property and its owner means a manual GIS and county-records lookup.</p>
-        <p><strong>Approach:</strong> upload the incident's KML flight path; the tool resolves the geographic footprint against county tax-parcel boundary data and returns the parcel and ownership record for any point along it.</p>
-        <p><strong>Status:</strong> working tool, self-directed.</p>
-      </article>
-      <article class="build">
-        <p class="build-tag">Geospatial · visualization</p>
-        <h3>Flight path visualization from KML</h3>
-        <p><strong>Problem:</strong> reviewing a flight plan from raw waypoints gives no real spatial sense of the flight.</p>
-        <p><strong>Approach:</strong> upload a KML file; the tool renders it as an interactive, Google Earth-style 3D view of the flight path over real terrain, so the flight can be reviewed visually rather than as a coordinate list.</p>
-        <p><strong>Status:</strong> working tool, self-directed.</p>
-      </article>
-      <article class="build">
-        <p class="build-tag">Generative CAD · RAG</p>
-        <h3>Spec documents to CAD model + JSON</h3>
-        <p><strong>Problem:</strong> turning part specification documents into a usable CAD model and structured data is normally manual drafting and data entry.</p>
-        <p><strong>Approach:</strong> a RAG pipeline that ingests spec documents and generates a corresponding CAD model plus a structured JSON representation of the specs.</p>
-        <p><strong>Status:</strong> proof of concept — the end-to-end pipeline worked and produced usable output, but token cost scaled poorly with document size and some fields were missed on extraction. Confirmed the approach; a production version would need a more targeted extraction strategy.</p>
-      </article>
+    <div class="carousel">
+      <div class="carousel-track" id="carousel-track" tabindex="0" aria-label="Selected builds, scrollable">
+        <article class="build">
+          <p class="build-tag">Geospatial · records</p>
+          <h3>Parcel ownership lookup from flight paths</h3>
+          <p><strong>Problem:</strong> after a drone incident, identifying the affected property and its owner means a manual GIS and county-records lookup.</p>
+          <p><strong>Approach:</strong> upload the incident's KML flight path; the tool resolves the geographic footprint against county tax-parcel boundary data and returns the parcel and ownership record for any point along it.</p>
+          <p><strong>Status:</strong> acquired by the FAA; in use by the Northern Plains UAS Test Site.</p>
+        </article>
+        <article class="build">
+          <p class="build-tag">Geospatial · visualization</p>
+          <h3>Flight path visualization from KML</h3>
+          <p><strong>Problem:</strong> reviewing a flight plan from raw waypoints gives no real spatial sense of the flight.</p>
+          <p><strong>Approach:</strong> upload a KML file; the tool renders it as an interactive, Google Earth-style 3D view of the flight path over real terrain, so the flight can be reviewed visually rather than as a coordinate list.</p>
+          <p><strong>Status:</strong> acquired by the FAA; in use by the Northern Plains UAS Test Site.</p>
+        </article>
+        <article class="build">
+          <p class="build-tag">Generative CAD · RAG</p>
+          <h3>Spec documents to CAD model + JSON</h3>
+          <p><strong>Problem:</strong> turning part specification documents into a usable CAD model and structured data is normally manual drafting and data entry.</p>
+          <p><strong>Approach:</strong> a RAG pipeline that ingests spec documents and generates a corresponding CAD model plus a structured JSON representation of the specs.</p>
+          <p><strong>Status:</strong> working prototype — generates a CAD model and structured JSON directly from spec documents, end to end.</p>
+        </article>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" id="carousel-prev" aria-label="Previous build">←</button>
+        <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Select build"></div>
+        <button type="button" class="carousel-btn" id="carousel-next" aria-label="Next build">→</button>
+      </div>
     </div>
   </section>
 

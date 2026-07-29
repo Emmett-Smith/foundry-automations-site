@@ -14,6 +14,60 @@ if ('IntersectionObserver' in window && revealTargets.length) {
   revealTargets.forEach((el) => el.classList.add('is-visible'));
 }
 
+// Selected-builds carousel
+const track = document.getElementById('carousel-track');
+if (track) {
+  const cards = Array.from(track.querySelectorAll('.build'));
+  const dotsContainer = document.getElementById('carousel-dots');
+  const prevBtn = document.getElementById('carousel-prev');
+  const nextBtn = document.getElementById('carousel-next');
+
+  const dots = cards.map((_, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'carousel-dot';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', `Go to build ${i + 1} of ${cards.length}`);
+    dot.addEventListener('click', () => {
+      cards[i].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    });
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
+  if (dots.length) dots[0].classList.add('is-active');
+
+  const setActive = (index) => {
+    dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+  };
+
+  let scrollTimeout;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      const trackCenter = track.scrollLeft + track.clientWidth / 2;
+      let closest = 0;
+      let closestDist = Infinity;
+      cards.forEach((card, i) => {
+        const cardCenter = card.offsetLeft + card.offsetWidth / 2;
+        const dist = Math.abs(cardCenter - trackCenter);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closest = i;
+        }
+      });
+      setActive(closest);
+    }, 100);
+  });
+
+  const scrollByCard = (dir) => {
+    const card = cards[0];
+    const gap = parseFloat(getComputedStyle(track).gap || '0');
+    track.scrollBy({ left: dir * (card.offsetWidth + gap), behavior: 'smooth' });
+  };
+  prevBtn?.addEventListener('click', () => scrollByCard(-1));
+  nextBtn?.addEventListener('click', () => scrollByCard(1));
+}
+
 // Contact form -> POST to backend /leads endpoint
 const API_BASE = window.FOUNDRY_API_BASE || 'http://localhost:8000';
 const form = document.getElementById('contact-form');
